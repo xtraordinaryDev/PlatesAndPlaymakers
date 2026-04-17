@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plates &amp; Playmakers · July 9, 2026 · Quincy Hall · Minneapolis</title>
+  <meta name="description" content="A luxury charity dining event benefiting families at M Health Fairview Masonic Children's Hospital. Thursday, July 9, 2026 at Quincy Hall, Minneapolis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Page load overlay -->
+  <div class="page-overlay" id="pageOverlay"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">
+      <img src="images/Plates_And_Playmakers_Logos_Plates_Wordmark_Gold.png" alt="Plates &amp; Playmakers" class="nav-wordmark" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#mission">MISSION</a></li>
+      <li><a href="chefs.html">CHEFS</a></li>
+      <li><a href="impact.html">IMPACT</a></li>
+      <li><a href="#event">EVENT</a></li>
+      <li><a href="https://www.onecause.com" target="_blank" rel="noopener" class="nav-cta">TICKETS</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- SECTION 1 — HERO -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <img src="images/Plates_And_Playmakers_Logos_Plates_Badge_Gold.png" alt="Plates &amp; Playmakers badge" class="hero-badge-img" />
+      <h1 class="hero-title">PLATES &amp;<br>PLAYMAKERS</h1>
+      <p class="hero-est">EST. 2026</p>
+      <p class="hero-tagline">WHERE GREAT FOOD MEETS GREATER PURPOSE</p>
+      <p class="hero-date">THURSDAY &middot; JULY 9 &middot; QUINCY HALL &middot; MINNEAPOLIS</p>
+      <a href="https://www.onecause.com" target="_blank" rel="noopener" class="cta-btn">GET TICKETS</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — MISSION -->
+  <section id="mission">
+    <div class="mission-left">
+      <h2>LET'S<br>FORK<br>HUNGER</h2>
+    </div>
+    <div class="mission-right">
+      <p class="mission-body">No parent or caregiver should wonder how they'll afford their next meal. Plates &amp; Playmakers benefits families at M Health Fairview Masonic Children's Hospital — ensuring families can focus on what matters most: being there for their child. Funds support food pantries, cafeteria credits, bedside meals, and grocery assistance.</p>
+      <div class="counter">Impact stats coming soon</div>
+      <div class="impact-cards">
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3h18v4H3zM3 9h10v12H3zM15 9h6v6h-6z" stroke="#9B895D" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>FOOD PANTRIES</span>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="6" width="18" height="13" rx="1" stroke="#9B895D" stroke-width="1.5"/>
+              <path d="M3 10h18M8 6V4M16 6V4" stroke="#9B895D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span>CAFETERIA CREDITS</span>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C9 2 6 5 6 9c0 4 3 7 6 11 3-4 6-7 6-11 0-4-3-7-6-7z" stroke="#9B895D" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="12" cy="9" r="2" stroke="#9B895D" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span>BEDSIDE MEALS</span>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 2l1.5 5H19l-2 7H7L5 3H2" stroke="#9B895D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="20" r="1.5" stroke="#9B895D" stroke-width="1.5"/>
+              <circle cx="17" cy="20" r="1.5" stroke="#9B895D" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span>GROCERY SUPPORT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — CHEFS (Horizontal Scroll) -->
+  <section id="chefs">
+    <div class="chefs-header">
+      <h2 class="fade-up">THE PLAYMAKERS</h2>
+      <p class="chefs-sub fade-up">12 CULINARY VISIONARIES &middot; ONE UNFORGETTABLE NIGHT</p>
+    </div>
+    <div class="chefs-track-wrapper">
+      <div class="chefs-track" id="chefsTrack">
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/ErikPham.jpg" alt="Eric Pham" />
+            <span class="chef-num">01</span>
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">ERIC PHAM</h3>
+            <p class="chef-restaurant">Khue's Kitchen</p>
+            <p class="chef-desc">Authentic Vietnamese, bold Twin Cities loyalty</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/Baaska.jpg" alt="Baaska" />
+            <span class="chef-num">02</span>
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">BAASKA</h3>
+            <p class="chef-restaurant">Sushi by Baaska</p>
+            <p class="chef-desc">Refined omakase, precision and artistry</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/GK.jpg" alt="Gavin Kaysen" />
+            <span class="chef-num">03</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">GAVIN KAYSEN</h3>
+            <p class="chef-restaurant">Bellecour &amp; Mara</p>
+            <p class="chef-desc">Multi-Beard winner, classic French mastery</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/DanielDelPrado.jpg" alt="Daniel Del Prado" />
+            <span class="chef-num">04</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">DANIEL DEL PRADO</h3>
+            <p class="chef-restaurant">Porzana</p>
+            <p class="chef-desc">Beard nominee, bold high-energy dining</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/JamieYoo.jpg" alt="Jamie Yoo" />
+            <span class="chef-num">05</span>
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">JAMIE YOO</h3>
+            <p class="chef-restaurant">Abang Yoli</p>
+            <p class="chef-desc">Vibrant Malaysian street food, rising star</p>
+          </div>
+        </div>
+
+        <div class="chef-card chef-card--no-photo">
+          <div class="chef-photo chef-photo--placeholder">
+            <span class="chef-num">06</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">ADAM RITTER</h3>
+            <p class="chef-restaurant">B&ucirc;cheron</p>
+            <p class="chef-desc">2025 Beard Best New Restaurant in America</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/DianeMoua.jpg" alt="Diane Moua" />
+            <span class="chef-num">07</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">DIANE MOUA</h3>
+            <p class="chef-restaurant">Diane's Place</p>
+            <p class="chef-desc">Beard finalist, Hmong heritage pastry artistry</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/TimNiver.jpg" alt="Tim Niver" />
+            <span class="chef-num">08</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">TIM NIVER</h3>
+            <p class="chef-restaurant">Mucci's</p>
+            <p class="chef-desc">Multi-year Beard semifinalist, community dining</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/AnnKim.jpg" alt="Ann Kim" />
+            <span class="chef-num">09</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">ANN KIM</h3>
+            <p class="chef-restaurant">Pizzeria Lola</p>
+            <p class="chef-desc">Beard winner, Netflix Chef's Table</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/MikeDecamo.jpg" alt="Mike DeCamp" />
+            <span class="chef-num">10</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">MIKE DeCAMP</h3>
+            <p class="chef-restaurant">Parlour</p>
+            <p class="chef-desc">Beard semifinalist, America's most iconic burger</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/SarahBocher.jpg" alt="Sarah Botcher" />
+            <span class="chef-num">11</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">SARAH BOTCHER</h3>
+            <p class="chef-restaurant">Black Walnut Bakery</p>
+            <p class="chef-desc">Beard semifinalist, artisan perfection</p>
+          </div>
+        </div>
+
+        <div class="chef-card">
+          <div class="chef-photo">
+            <img src="images/chefs/MarcHeu.jpg" alt="Marc Heu" />
+            <span class="chef-num">12</span>
+          </div>
+          <div class="chef-info">
+            <span class="jb-badge">JB</span>
+            <h3 class="chef-name">MARC HEU</h3>
+            <p class="chef-restaurant">Marc Heu Patisserie</p>
+            <p class="chef-desc">Classical French pastry, Beard-recognized</p>
+          </div>
+        </div>
+
+      </div><!-- end .chefs-track -->
+    </div>
+  </section>
+
+  <!-- SECTION 4 — EVENT DETAILS -->
+  <section id="event">
+    <div class="event-left">
+      <p class="event-label fade-up">SAVE THE DATE</p>
+      <h2 class="event-date fade-up">JULY 9</h2>
+      <p class="event-year fade-up">2026</p>
+      <p class="event-venue fade-up">Quincy Hall &middot; Minneapolis &middot; 7PM</p>
+    </div>
+    <div class="event-right">
+      <div class="event-detail fade-up">
+        <h4>DRESS CODE</h4>
+        <p>Black tie encouraged. Come hungry.</p>
+      </div>
+      <div class="event-detail fade-up">
+        <h4>FORMAT</h4>
+        <p>12 chefs. One night. Unlimited tastings.</p>
+      </div>
+      <div class="event-detail fade-up">
+        <h4>CAUSE</h4>
+        <p>100% of proceeds benefit families at Masonic Children's Hospital.</p>
+      </div>
+      <div class="event-detail fade-up">
+        <h4>COUNTDOWN</h4>
+        <div class="countdown" id="countdown">
+          <span class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-label">DAYS</span></span>
+          <span class="countdown-sep">&middot;</span>
+          <span class="countdown-unit"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-label">HRS</span></span>
+          <span class="countdown-sep">&middot;</span>
+          <span class="countdown-unit"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-label">MIN</span></span>
+          <span class="countdown-sep">&middot;</span>
+          <span class="countdown-unit"><span class="countdown-num" id="cd-secs">--</span><span class="countdown-label">SEC</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — TICKETS CTA -->
+  <section id="tickets">
+    <div class="tickets-bg-pattern"></div>
+    <div class="tickets-content">
+      <p class="tickets-eyebrow fade-up">JULY 9, 2026 &middot; QUINCY HALL</p>
+      <h2 class="tickets-headline">AN EVENING YOU WON'T FORGET</h2>
+      <p class="tickets-sub fade-up">For a cause you'll never stop believing in.</p>
+      <a href="https://www.onecause.com" target="_blank" rel="noopener" class="cta-btn cta-btn--large fade-up">GET TICKETS ON ONCAUSE</a>
+      <p class="tickets-limit fade-up">Tables available now &middot; Ticketing through OneCause</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <img src="images/Plates_And_Playmakers_Logos_Plates_Badge_Gold.png" alt="Plates &amp; Playmakers" class="footer-badge-img" />
+      <img src="images/Plates_And_Playmakers_Logos_Plates_Wordmark_Gold.png" alt="Plates &amp; Playmakers" class="footer-wordmark-img" />
+      <p class="footer-sub">Benefiting M Health Fairview Masonic Children's Hospital</p>
+      <div class="footer-divider"></div>
+      <nav class="footer-pages">
+        <a href="chefs.html">CHEFS</a>
+        <a href="impact.html">IMPACT</a>
+        <a href="sponsors.html">SPONSORS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="events.html">EVENTS</a>
+        <a href="donate.html">DONATE</a>
+        <a href="press.html">PRESS</a>
+        <a href="menu.html">MENU</a>
+      </nav>
+      <div class="footer-divider"></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+      </div>
+      <p class="footer-copy">&copy;2026 Plates &amp; Playmakers &middot; Minneapolis, MN</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
