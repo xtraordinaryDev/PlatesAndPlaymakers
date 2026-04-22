@@ -605,6 +605,13 @@ body.subpage #nav {
 
 /* ── FAQ ───────────────────────────────────────────────────── */
 
+.faq-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
 .faq-groups {
   display: flex;
   flex-direction: column;
@@ -1368,6 +1375,11 @@ body.subpage #nav {
   .press-grid {
     grid-template-columns: 1fr;
   }
+
+  .faq-layout {
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+  }
 }
 
 /* ── RESPONSIVE — MOBILE (max-width: 768px) ───────────────── */
@@ -1465,5 +1477,14 @@ body.subpage #nav {
 
   .become-sponsor {
     padding: 40px 28px;
+  }
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .faq-layout > div:first-child {
+    display: none;
   }
 }
