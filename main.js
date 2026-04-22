@@ -1,18 +1,16 @@
 /* ============================================================
    PLATES & PLAYMAKERS — main.js
    Init order:
-   1. Lenis smooth scroll
-   2. GSAP.registerPlugin(ScrollTrigger)
-   3. Custom cursor
-   4. Nav scroll behavior
-   5. Page load animation
-   6. Hero particle canvas
-   7. Hero text stagger reveal
-   8. Mission CountUp
-   9. Chefs horizontal scroll (GSAP pin + scrub)
-   10. Tickets headline letter reveal
-   11. Event countdown timer
-   12. General fade-up animations
+   1. GSAP.registerPlugin(ScrollTrigger)
+   2. Custom cursor
+   3. Nav scroll behavior
+   4. Page load animation
+   5. Hero particle canvas
+   6. Hero text stagger reveal
+   7. Mission CountUp
+   8. Tickets headline letter reveal
+   9. Event countdown timer
+   10. General fade-up animations
    ============================================================ */
 
 (function () {
@@ -21,30 +19,9 @@
   const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
   const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
 
-  /* ── 1. LENIS SMOOTH SCROLL ─────────────────────────────── */
-
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    smoothTouch: false,
-  });
-
-  function rafLoop(time) {
-    lenis.raf(time);
-    requestAnimationFrame(rafLoop);
-  }
-  requestAnimationFrame(rafLoop);
-
-  /* ── 2. GSAP REGISTER ───────────────────────────────────── */
+  /* ── 1. GSAP REGISTER ───────────────────────────────────── */
 
   gsap.registerPlugin(ScrollTrigger);
-
-  // Keep GSAP ScrollTrigger in sync with Lenis
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
   gsap.ticker.lagSmoothing(0);
 
   /* ── 3. CUSTOM CURSOR ───────────────────────────────────── */
@@ -257,25 +234,20 @@
   const countEl = document.getElementById('count');
   let countStarted = false;
 
-  function formatNumber(n) {
-    return Math.floor(n).toLocaleString('en-US');
-  }
-
   const countObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !countStarted) {
           countStarted = true;
-          const target   = 185000;
+          const target   = 6;
           const duration = 2000;
           const start    = performance.now();
 
           function step(now) {
             const elapsed  = now - start;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease-out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            countEl.textContent = formatNumber(eased * target);
+            const eased    = 1 - Math.pow(1 - progress, 3);
+            countEl.textContent = (eased * target).toFixed(1);
             if (progress < 1) requestAnimationFrame(step);
           }
 
@@ -297,14 +269,17 @@
   const ticketsHeadline = document.querySelector('.tickets-headline');
   if (ticketsHeadline) {
     const text = ticketsHeadline.textContent;
+    // Wrap each word in a nowrap container so the browser never breaks mid-word
     ticketsHeadline.innerHTML = text
-      .split('')
-      .map((ch) =>
-        ch === ' '
-          ? '<span class="t-char" style="display:inline-block;">&nbsp;</span>'
-          : `<span class="t-char" style="display:inline-block; opacity:0; transform:translateY(20px);">${ch}</span>`
-      )
-      .join('');
+      .split(' ')
+      .map((word) => {
+        const chars = word
+          .split('')
+          .map((ch) => `<span class="t-char" style="display:inline-block; opacity:0; transform:translateY(20px);">${ch}</span>`)
+          .join('');
+        return `<span style="display:inline-block; white-space:nowrap;">${chars}</span>`;
+      })
+      .join('<span class="t-char" style="display:inline-block;">&nbsp;</span>');
 
     ScrollTrigger.create({
       trigger: '#tickets',
