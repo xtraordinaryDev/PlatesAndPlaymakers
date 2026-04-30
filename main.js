@@ -237,9 +237,9 @@
   const countObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !countStarted) {
+        if (entry.isIntersecting && !countStarted && countEl) {
           countStarted = true;
-          const target   = 6;
+          const target   = 100;
           const duration = 2000;
           const start    = performance.now();
 
@@ -247,7 +247,8 @@
             const elapsed  = now - start;
             const progress = Math.min(elapsed / duration, 1);
             const eased    = 1 - Math.pow(1 - progress, 3);
-            countEl.textContent = (eased * target).toFixed(1);
+            const value    = progress >= 1 ? target : Math.round(eased * target);
+            countEl.textContent = String(value);
             if (progress < 1) requestAnimationFrame(step);
           }
 
@@ -259,7 +260,7 @@
   );
 
   const missionSection = document.getElementById('mission');
-  if (missionSection) countObserver.observe(missionSection);
+  if (missionSection && countEl) countObserver.observe(missionSection);
 
   /* ── 9. CHEFS GRID — no action needed here ──────────────── */
   // Animation handled below in section 12
