@@ -378,14 +378,15 @@ body:has(.cta-btn:hover) .cursor-ring {
 }
 
 .mission-left {
-  flex: 0 0 45%;
+  flex: 0 0 42%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   padding: 80px 60px;
   border-right: 1px solid var(--gold-dim);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .mission-left::before {
@@ -397,12 +398,13 @@ body:has(.cta-btn:hover) .cursor-ring {
 }
 
 .mission-left h2 {
-  font-size: clamp(3rem, 10vw, 9rem);
+  font-size: clamp(3.5rem, 8vw, 8rem);
   color: var(--gold);
-  line-height: 0.9;
+  line-height: 0.92;
   letter-spacing: -0.02em;
   font-weight: 700;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .mission-right {
