@@ -546,6 +546,85 @@ body.subpage #nav {
   text-transform: uppercase;
 }
 
+/* ── SPONSOR LOGO WALL ─────────────────────────────────────── */
+
+.sponsor-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.sponsor-logo-card {
+  background: #fdfdfb;
+  border: 1px solid var(--gold-dim);
+  min-height: 170px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-logo-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.sponsor-logo-card img {
+  max-width: 100%;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.sponsor-logo-card--name {
+  background: transparent;
+  gap: 8px;
+  text-align: center;
+}
+
+.sponsor-logo-card--name .sponsor-name-main {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.sponsor-logo-card--name .sponsor-name-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  color: var(--cream-dim);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .sponsor-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sponsor-logo-card {
+    min-height: 130px;
+    padding: 20px;
+  }
+
+  .sponsor-logo-card img {
+    max-height: 80px;
+  }
+}
+
 /* Become a sponsor */
 .become-sponsor {
   background: var(--gold-faint);
